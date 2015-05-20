@@ -9,6 +9,20 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CFC2D2D619A5417D00170E69"
+               BuildableName = "LungSoundStudy.app"
+               BlueprintName = "LungSoundStudy"
+               ReferencedContainer = "container:LungSoundStudy.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "YES">
@@ -17,7 +31,7 @@
                BlueprintIdentifier = "36EF84CF1A951327008C255F"
                BuildableName = "Parkinson Tests.xctest"
                BlueprintName = "Parkinson Tests"
-               ReferencedContainer = "container:Parkinson.xcodeproj">
+               ReferencedContainer = "container:LungSoundStudy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,22 +49,17 @@
                BlueprintIdentifier = "36EF84CF1A951327008C255F"
                BuildableName = "Parkinson Tests.xctest"
                BlueprintName = "Parkinson Tests"
-               ReferencedContainer = "container:Parkinson.xcodeproj">
+               ReferencedContainer = "container:LungSoundStudy.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "APCMedTrackerTests/testZZZZZZZ_deleteAllData">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36EF84CF1A951327008C255F"
-            BuildableName = "Parkinson Tests.xctest"
-            BlueprintName = "Parkinson Tests"
-            ReferencedContainer = "container:Parkinson.xcodeproj">
+            BlueprintIdentifier = "CFC2D2D619A5417D00170E69"
+            BuildableName = "LungSoundStudy.app"
+            BlueprintName = "LungSoundStudy"
+            ReferencedContainer = "container:LungSoundStudy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,15 +72,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36EF84CF1A951327008C255F"
-            BuildableName = "Parkinson Tests.xctest"
-            BlueprintName = "Parkinson Tests"
-            ReferencedContainer = "container:Parkinson.xcodeproj">
+            BlueprintIdentifier = "CFC2D2D619A5417D00170E69"
+            BuildableName = "LungSoundStudy.app"
+            BlueprintName = "LungSoundStudy"
+            ReferencedContainer = "container:LungSoundStudy.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -81,15 +91,16 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36EF84CF1A951327008C255F"
-            BuildableName = "Parkinson Tests.xctest"
-            BlueprintName = "Parkinson Tests"
-            ReferencedContainer = "container:Parkinson.xcodeproj">
+            BlueprintIdentifier = "CFC2D2D619A5417D00170E69"
+            BuildableName = "LungSoundStudy.app"
+            BlueprintName = "LungSoundStudy"
+            ReferencedContainer = "container:LungSoundStudy.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
