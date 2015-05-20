@@ -47,7 +47,7 @@ the consent material has been marked as an example.
 License
 =======
 
-The source in the mPower repository is made available under the
+The source in the LungSoundStudy repository is made available under the
 following license unless another license is explicitly identified:
 
 ```
