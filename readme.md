@@ -1,17 +1,9 @@
-mPower App
+LungSoundStudy App
 ==========
 
-The Parkinson app is one of the first five apps built using [ResearchKit](https://github.com/researchkit/ResearchKit).
+The LungSoundStudy app is based on (forked) from mPower, one of the first five apps built using [ResearchKit](https://github.com/researchkit/ResearchKit).
 
-mPower is a unique iPhone application that uses a mix of surveys and
-tasks that activate phone sensors to collect and track health and
-symptoms of Parkinson's Disease (PD) progression - like dexterity,
-balance or gait.
-
-The goal of this app is to learn more about the variations of PD, and to improve the way
-we describe these variations and to learn how mobile devices and
-sensors can help us to measure PD and its progression to ultimately
-improve the quality of life for people with PD.
+The goal of this app is to build lung sound dataset for researchers to study and analyze the dataset.
 
 
 Building the App
@@ -27,16 +19,16 @@ Building the App
 First, check out the source, including all the dependencies:
 
 ```
-git clone --recurse-submodules https://github.com/ResearchKit/mPower.git
+git clone --recurse-submodules https://github.com/ResearchKit/LungSoundStudy.git
 ```
 
 ###Building it
 
-Open the project, `Parkinson.xcodeproj`, and build and run.
+Open the project, `LungSoundStudy.xcodeproj`, and build and run.
 
 
-Other components
-================
+Other components from mPower
+===========================
 
 Several survey instruments used in the shipping app have been
 removed from the open source version because they are not free
