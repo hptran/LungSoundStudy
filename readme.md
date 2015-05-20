@@ -1,7 +1,7 @@
 LungSoundStudy App
 ==========
 
-The LungSoundStudy app is based on (forked) from mPower, one of the first five apps built using [ResearchKit](https://github.com/researchkit/ResearchKit).
+The LungSoundStudy app is based on (forked from) mPower App, one of the first five apps built using [ResearchKit](https://github.com/researchkit/ResearchKit).
 
 The goal of this app is to build lung sound dataset for researchers to study and analyze the dataset.
 
@@ -27,7 +27,7 @@ git clone --recurse-submodules https://github.com/ResearchKit/LungSoundStudy.git
 Open the project, `LungSoundStudy.xcodeproj`, and build and run.
 
 
-Other components from mPower
+Other notes from mPower
 ===========================
 
 Several survey instruments used in the shipping app have been
