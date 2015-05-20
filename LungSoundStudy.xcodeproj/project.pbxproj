@@ -248,7 +248,7 @@
 		CFC2D2D719A5417D00170E69 /* LungSoundStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LungSoundStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC2D2DB19A5417D00170E69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFC2D2DC19A5417D00170E69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CFC2D2E719A5417D00170E69 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Parkinson/Images.xcassets; sourceTree = "<group>"; };
+		CFC2D2E719A5417D00170E69 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LungSoundStudy/Images.xcassets; sourceTree = "<group>"; };
 		CFDA47A61A97BF8800B32C34 /* APHMedicationTrackerTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APHMedicationTrackerTaskViewController.h; path = MedicationTracking/APHMedicationTrackerTaskViewController.h; sourceTree = "<group>"; };
 		CFDA47A71A97BF8800B32C34 /* APHMedicationTrackerTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APHMedicationTrackerTaskViewController.m; path = MedicationTracking/APHMedicationTrackerTaskViewController.m; sourceTree = "<group>"; };
 		CFF1A50E1A81976500EAEE0E /* APHSpatialSpanMemoryGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APHSpatialSpanMemoryGameViewController.h; path = SpatialSpanMemoryControllers/APHSpatialSpanMemoryGameViewController.h; sourceTree = "<group>"; };
@@ -467,8 +467,7 @@
 				255D2F4619C40F25002137F1 /* Resources */,
 				CFC2D2DA19A5417D00170E69 /* Supporting Files */,
 			);
-			name = LungSoundStudy;
-			path = Parkinson;
+			path = LungSoundStudy;
 			sourceTree = "<group>";
 		};
 		CFC2D2DA19A5417D00170E69 /* Supporting Files */ = {
@@ -937,7 +936,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Parkinson/Parkinson.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LungSoundStudy/Parkinson.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -948,7 +947,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/PDScores/PDScores/**",
 				);
-				INFOPLIST_FILE = Parkinson/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LungSoundStudy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-all_load";
@@ -1053,7 +1052,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Parkinson/Parkinson.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LungSoundStudy/Parkinson.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1064,7 +1063,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/PDScores/PDScores/**",
 				);
-				INFOPLIST_FILE = Parkinson/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LungSoundStudy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-all_load";
@@ -1081,7 +1080,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Parkinson/Parkinson.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LungSoundStudy/Parkinson.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1092,7 +1091,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/PDScores/PDScores/**",
 				);
-				INFOPLIST_FILE = Parkinson/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LungSoundStudy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-all_load";
@@ -1157,7 +1156,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Parkinson/Parkinson.entitlements;
+				CODE_SIGN_ENTITLEMENTS = LungSoundStudy/Parkinson.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1168,7 +1167,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(PROJECT_DIR)/PDScores/PDScores/**",
 				);
-				INFOPLIST_FILE = Parkinson/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LungSoundStudy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-all_load";
