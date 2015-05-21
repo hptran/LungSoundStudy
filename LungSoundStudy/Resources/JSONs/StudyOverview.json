@@ -1,13 +1,13 @@
 {
-    "disease_name":"mPower",
-    "from_date":"December 2014",
-    "to_date":"January 2015",
+    "disease_name":"LungSoundStudy",
+    "from_date":"June 2015",
+    "to_date":"September 2019",
     "logo_name": "logo_research_institute",
     "questions":
     [
      {
-     "title":"Welcome to mPower",
-     "details":"A Parkinson Disease Research Study",
+     "title":"Welcome to LungSoundStudy",
+     "details":"A Lung Sound Research Study",
      },
      
      {
@@ -18,7 +18,7 @@
      
      {
      "title":"About the App",
-     "details":"Please tap on the image below to watch a short video introduction to mPower.",
+     "details":"Please tap on the image below to watch a short video introduction to LungSoundStudy (available soon).",
      "video_name" : "Intro",
      },
      
