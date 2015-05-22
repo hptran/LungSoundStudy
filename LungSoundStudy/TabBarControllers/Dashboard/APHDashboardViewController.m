@@ -64,19 +64,19 @@ static NSString * const kAPCRightDetailTableViewCellIdentifier = @"APCRightDetai
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         _rowItemsOrder = [NSMutableArray arrayWithArray:[defaults objectForKey:kAPCDashboardRowItemsOrder]];
         
-        if (!_rowItemsOrder.count) {
-            _rowItemsOrder = [[NSMutableArray alloc] initWithArray:@[
-                                                                     @(kAPHDashboardItemTypeSteps),
-                                                                     @(kAPHDashboardItemTypeIntervalTapping),
-                                                                     @(kAPHDashboardItemTypeSpatialMemory),@(kAPHDashboardItemTypePhonation),]];
-                              
-            if ([APCDeviceHardware isiPhone5SOrNewer]) {
-                [_rowItemsOrder addObject:@(kAPHDashboardItemTypeGait)];
-            }
-            [defaults setObject:[NSArray arrayWithArray:_rowItemsOrder] forKey:kAPCDashboardRowItemsOrder];
-            [defaults synchronize];
-            
-        }
+//        if (!_rowItemsOrder.count) {
+//            _rowItemsOrder = [[NSMutableArray alloc] initWithArray:@[
+//                                                                     @(kAPHDashboardItemTypeSteps),
+//                                                                     @(kAPHDashboardItemTypeIntervalTapping),
+//                                                                     @(kAPHDashboardItemTypeSpatialMemory),@(kAPHDashboardItemTypePhonation),]];
+//                              
+//            if ([APCDeviceHardware isiPhone5SOrNewer]) {
+//                [_rowItemsOrder addObject:@(kAPHDashboardItemTypeGait)];
+//            }
+//            [defaults setObject:[NSArray arrayWithArray:_rowItemsOrder] forKey:kAPCDashboardRowItemsOrder];
+//            [defaults synchronize];
+//            
+//        }
         
         self.title = NSLocalizedString(@"Dashboard", @"Dashboard");
     }
@@ -92,8 +92,8 @@ static NSString * const kAPCRightDetailTableViewCellIdentifier = @"APCRightDetai
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self prepareScoringObjects];
-    [self prepareData];
+//    [self prepareScoringObjects];
+//    [self prepareData];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -103,8 +103,8 @@ static NSString * const kAPCRightDetailTableViewCellIdentifier = @"APCRightDetai
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.rowItemsOrder = [NSMutableArray arrayWithArray:[defaults objectForKey:kAPCDashboardRowItemsOrder]];
     
-    [self prepareScoringObjects];
-    [self prepareData];
+//    [self prepareScoringObjects];
+//    [self prepareData];
 }
 
 - (void)updateVisibleRowsInTableView:(NSNotification *) __unused notification

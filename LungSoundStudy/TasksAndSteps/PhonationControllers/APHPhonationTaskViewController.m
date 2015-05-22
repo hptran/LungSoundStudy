@@ -38,7 +38,7 @@
 #import "APHIntervalTappingRecorderDataKeys.h"
 #import "APHAppDelegate.h"
 
-static NSString *const kTaskName                              = @"Voice";
+static NSString *const kTaskName                              = @"Lung Sound";
 
     //
     //        Step Identifiers
@@ -53,20 +53,32 @@ static NSString *const kMomentInDayStepIdentifier             = @"momentInDay";
 
 static NSString *const kMomentInDayFormat                     = @"momentInDayFormat";
 
-static NSString *const kMomentInDayFormatTitle                = @"We would like to understand how your performance on"
-                                                                 " this activity could be affected by the timing of your medication.";
+static NSString *const kMomentInDayFormatTitle                = @"Specify the position that you record lung sound and then click Next at the bottom";
 
-static NSString *const kMomentInDayFormatItemText             = @"When are you performing this Activity?";
-static NSString *const kMomentInDayFormatChoiceJustWokeUp     = @"Immediately before Parkinson medication";
-static NSString *const kMomentInDayFormatChoiceTookMyMedicine = @"Just after Parkinson medication (at your best)";
-static NSString *const kMomentInDayFormatChoiceEvening        = @"Another time";
-static NSString *const kMomentInDayFormatChoiceNone           = @"I don't take Parkinson medications";
-
+static NSString *const kInstructionRecordingLungSound         = @"";
+static NSString *const kAnteriorChestWall1     = @"Anterior chest wall: 1";
+static NSString *const kAnteriorChestWall2     = @"Anterior chest wall: 2";
+static NSString *const kAnteriorChestWall3     = @"Anterior chest wall: 3";
+static NSString *const kAnteriorChestWall4     = @"Anterior chest wall: 4";
+static NSString *const kAnteriorChestWall5     = @"Anterior chest wall: 5";
+static NSString *const kAnteriorChestWall6     = @"Anterior chest wall: 6";
+static NSString *const kAnteriorChestWall7     = @"Anterior chest wall: 7";
+static NSString *const kAnteriorChestWall8     = @"Anterior chest wall: 8";
+static NSString *const kPosteriorChestWall1     = @"Poterior chest wall: 1";
+static NSString *const kPosteriorChestWall2     = @"Poterior chest wall: 2";
+static NSString *const kPosteriorChestWall3     = @"Poterior chest wall: 3";
+static NSString *const kPosteriorChestWall4     = @"Poterior chest wall: 4";
+static NSString *const kPosteriorChestWall5     = @"Poterior chest wall: 5";
+static NSString *const kPosteriorChestWall6     = @"Poterior chest wall: 6";
+static NSString *const kPosteriorChestWall7     = @"Poterior chest wall: 7";
+static NSString *const kPosteriorChestWall8     = @"Poterior chest wall: 8";
+static NSString *const kPosteriorChestWall9     = @"Poterior chest wall: 9";
+static NSString *const kPosteriorChestWall10     = @"Poterior chest wall: 10";
 static NSString *      kEnableMicrophoneMessage               = @"You need to enable access to microphone.";
 
 static double kMinimumAmountOfTimeToShowSurvey                = 20.0 * 60.0;
 
-static  NSString       *kTaskViewControllerTitle              = @"Voice Activity";
+static  NSString       *kTaskViewControllerTitle              = @"Auscultation Activity";
 
 static  NSTimeInterval  kGetSoundingAaahhhInterval            = 10.0;
 
@@ -101,44 +113,66 @@ static  NSTimeInterval  kGetSoundingAaahhhInterval            = 10.0;
         //    their medication schedule
         //
     [task.steps[0] setTitle:NSLocalizedString(kTaskName, nil)];
+    [task.steps[0] setText:NSLocalizedString(@"This activity is for recording lung sound.", nil)];
+    [task.steps[0] setDetailText:NSLocalizedString(@"Make sure an eletronic stethoscope is attached to your phone", nil)];
 
     [task.steps[1] setTitle:NSLocalizedString(kTaskName, nil)];
-    [task.steps[1] setText:NSLocalizedString(@"Take a deep breath and say “Aaaaah” into the microphone for as long as you can. Keep a steady volume so the audio bars remain blue.", nil)];
-    [task.steps[1] setDetailText:NSLocalizedString(@"Tap Next to begin the test.", nil)];
-
+    [task.steps[1] setText:NSLocalizedString(@"Place the stethoscope at the lung position you specified", nil)];
+    [task.steps[1] setDetailText:NSLocalizedString(@"Tap Next to start recording", nil)];
+    [task.steps[3] setTitle:NSLocalizedString(@"Recording", nil)];
     [task.steps[4] setTitle:NSLocalizedString(@"Thank You!", nil)];
-    [task.steps[4] setText:NSLocalizedString(@"The results of this activity can be viewed on the dashboard", nil)];
+    [task.steps[4] setText:NSLocalizedString(@"The results will be saved and sent to our secure database", nil)];
 
-    APHAppDelegate *appDelegate = (APHAppDelegate *) [UIApplication sharedApplication].delegate;
-    NSDate *lastCompletionDate = appDelegate.dataSubstrate.currentUser.taskCompletion;
-    NSTimeInterval numberOfSecondsSinceTaskCompletion = [[NSDate date] timeIntervalSinceDate: lastCompletionDate];
-    
-    if (numberOfSecondsSinceTaskCompletion > kMinimumAmountOfTimeToShowSurvey || lastCompletionDate == nil) {
+    NSMutableArray *stepQuestions = [NSMutableArray array];
+    ORKFormStep *step = [[ORKFormStep alloc] initWithIdentifier:kMomentInDayStepIdentifier title:nil text:NSLocalizedString(kMomentInDayFormatTitle, nil)];
+    step.optional = NO;
+    {
+        NSArray *choices = @[
+                             NSLocalizedString(kAnteriorChestWall1,
+                                               kAnteriorChestWall1),
+                             NSLocalizedString(kAnteriorChestWall2,
+                                               kAnteriorChestWall2),
+                             NSLocalizedString(kAnteriorChestWall3,
+                                               kAnteriorChestWall3),
+                             NSLocalizedString(kAnteriorChestWall4,
+                                               kAnteriorChestWall4),
+                             NSLocalizedString(kAnteriorChestWall5,
+                                               kAnteriorChestWall5),
+                             NSLocalizedString(kAnteriorChestWall6,
+                                               kAnteriorChestWall6),
+                             NSLocalizedString(kAnteriorChestWall7,
+                                               kAnteriorChestWall7),
+                             NSLocalizedString(kAnteriorChestWall8,
+                                               kAnteriorChestWall8),
+                             NSLocalizedString(kPosteriorChestWall1,
+                                               kPosteriorChestWall1),
+                             NSLocalizedString(kPosteriorChestWall2,
+                                               kPosteriorChestWall2),
+                             NSLocalizedString(kPosteriorChestWall3,
+                                               kPosteriorChestWall3),
+                             NSLocalizedString(kPosteriorChestWall4,
+                                               kPosteriorChestWall4),
+                             NSLocalizedString(kPosteriorChestWall5,
+                                               kPosteriorChestWall5),
+                             NSLocalizedString(kPosteriorChestWall6,
+                                               kPosteriorChestWall6),
+                             NSLocalizedString(kPosteriorChestWall7,
+                                               kPosteriorChestWall7),
+                             NSLocalizedString(kPosteriorChestWall8,
+                                               kPosteriorChestWall8),
+                             NSLocalizedString(kPosteriorChestWall9,
+                                               kPosteriorChestWall9),
+                             NSLocalizedString(kPosteriorChestWall10,
+                                               kPosteriorChestWall10)
+                             ];
         
-        NSMutableArray *stepQuestions = [NSMutableArray array];
+        ORKAnswerFormat *format = [ORKTextChoiceAnswerFormat choiceAnswerFormatWithStyle:ORKChoiceAnswerStyleSingleChoice
+                                                                             textChoices:choices];
         
-        ORKFormStep *step = [[ORKFormStep alloc] initWithIdentifier:kMomentInDayStepIdentifier title:nil text:NSLocalizedString(kMomentInDayFormatTitle, nil)];
-        step.optional = NO;
-        {
-            NSArray *choices = @[
-                                 NSLocalizedString(kMomentInDayFormatChoiceJustWokeUp,
-                                                   kMomentInDayFormatChoiceJustWokeUp),
-                                 NSLocalizedString(kMomentInDayFormatChoiceTookMyMedicine,
-                                                   kMomentInDayFormatChoiceTookMyMedicine),
-                                 NSLocalizedString(kMomentInDayFormatChoiceEvening,
-                                                   kMomentInDayFormatChoiceEvening),
-                                 NSLocalizedString(kMomentInDayFormatChoiceNone,
-                                                   kMomentInDayFormatChoiceNone)
-                                 ];
-            
-            ORKAnswerFormat *format = [ORKTextChoiceAnswerFormat choiceAnswerFormatWithStyle:ORKChoiceAnswerStyleSingleChoice
-                                                                                 textChoices:choices];
-            
-            ORKFormItem *item = [[ORKFormItem alloc] initWithIdentifier:kMomentInDayFormat
-                                                                   text:NSLocalizedString(kMomentInDayFormatItemText, kMomentInDayFormatItemText)
-                                                           answerFormat:format];
-            [stepQuestions addObject:item];
-        }
+        ORKFormItem *item = [[ORKFormItem alloc] initWithIdentifier:kMomentInDayFormat
+                                                               text:NSLocalizedString(kInstructionRecordingLungSound, kInstructionRecordingLungSound)
+                                                       answerFormat:format];
+        [stepQuestions addObject:item];
         [step setFormItems:stepQuestions];
         
         NSMutableArray  *phonationSteps = [task.steps mutableCopy];

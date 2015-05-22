@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
     
-    [self prepareData];
+//    [self prepareData];
 }
 
 - (void)prepareData
