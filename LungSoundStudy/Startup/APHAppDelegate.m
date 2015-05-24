@@ -72,11 +72,11 @@ static NSInteger const kMonthOfDayObject                = 2;
 - (void) setUpInitializationOptions
 {
     NSDictionary *permissionsDescriptions = @{
-                                              @(kSignUpPermissionsTypeLocation) : NSLocalizedString(@"Using your GPS enables the app to accurately determine distances travelled. Your actual location will never be shared.", @""),
-                                              @(kSignUpPermissionsTypeCoremotion) : NSLocalizedString(@"Using the motion co-processor allows the app to determine your activity, helping the study better understand how activity level may influence disease.", @""),
-                                              @(kSignUpPermissionsTypeMicrophone) : NSLocalizedString(@"Access to microphone is required for your Voice Recording Activity.", @""),
-                                              @(kSignUpPermissionsTypeLocalNotifications) : NSLocalizedString(@"Allowing notifications enables the app to show you reminders.", @""),
-                                              @(kSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"We hope that you understood the important parts in our consent document. On the next screen, you will be prompted to the registration form", @""),
+                                              @(kAPCSignUpPermissionsTypeLocation) : NSLocalizedString(@"Using your GPS enables the app to accurately determine distances travelled. Your actual location will never be shared.", @""),
+                                              @(kAPCSignUpPermissionsTypeCoremotion) : NSLocalizedString(@"Using the motion co-processor allows the app to determine your activity, helping the study better understand how activity level may influence disease.", @""),
+                                              @(kAPCSignUpPermissionsTypeMicrophone) : NSLocalizedString(@"Access to microphone is required for your Voice Recording Activity.", @""),
+                                              @(kAPCSignUpPermissionsTypeLocalNotifications) : NSLocalizedString(@"Allowing notifications enables the app to show you reminders.", @""),
+                                              @(kAPCSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"We hope that you understood the important parts in our consent document. On the next screen, you will be prompted to the registration form", @""),
                                                   };
     
     NSMutableDictionary * dictionary = [super defaultInitializationOptions];
@@ -93,10 +93,10 @@ static NSInteger const kMonthOfDayObject                = 2;
                                            kHKWritePermissionsKey                : @[
                                                    ],
                                            kAppServicesListRequiredKey           : @[
-                                                   @(kSignUpPermissionsTypeLocation),
-                                                   @(kSignUpPermissionsTypeCoremotion),
-                                                   @(kSignUpPermissionsTypeMicrophone),
-                                                   @(kSignUpPermissionsTypeLocalNotifications)
+                                                   @(kAPCSignUpPermissionsTypeLocation),
+                                                   @(kAPCSignUpPermissionsTypeCoremotion),
+                                                   @(kAPCSignUpPermissionsTypeMicrophone),
+                                                   @(kAPCSignUpPermissionsTypeLocalNotifications)
                                                    ],
                                            kAppServicesDescriptionsKey : permissionsDescriptions,
                                            kAppProfileElementsListKey            : @[
@@ -194,14 +194,14 @@ static NSInteger const kMonthOfDayObject                = 2;
     //
     // Set up location tracker
     //
-    APCCoreLocationTracker * locationTracker = [[APCCoreLocationTracker alloc] initWithIdentifier: @"locationTracker"
-                                                                           deferredUpdatesTimeout: 60.0 * 60.0
-                                                                            andHomeLocationStatus: APCPassiveLocationTrackingHomeLocationUnavailable];
-    
-    if (locationTracker != nil)
-    {
-        [self.passiveDataCollector addTracker: locationTracker];
-    }
+//    APCCoreLocationTracker * locationTracker = [[APCCoreLocationTracker alloc] initWithIdentifier: @"locationTracker"
+//                                                                           deferredUpdatesTimeout: 60.0 * 60.0
+//                                                                            andHomeLocationStatus: APCPassiveLocationTrackingHomeLocationUnavailable];
+//    
+//    if (locationTracker != nil)
+//    {
+//        [self.passiveDataCollector addTracker: locationTracker];
+//    }
 }
 
 /*********************************************************************************/

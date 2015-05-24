@@ -29,8 +29,6 @@
 		743BFFFF1A90E12800438241 /* APHConsentSection.json in Resources */ = {isa = PBXBuildFile; fileRef = 743BFFFE1A90E12800438241 /* APHConsentSection.json */; };
 		74B713EB1AC0722D00FE2553 /* BridgeSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74B713A41ABF04B900FE2553 /* BridgeSDK.framework */; };
 		74B713EC1AC0722D00FE2553 /* BridgeSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 74B713A41ABF04B900FE2553 /* BridgeSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		74B713F21AC0722E00FE2553 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743AD0D81ABE2DE40071C218 /* ResearchKit.framework */; };
-		74B713F31AC0722E00FE2553 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 743AD0D81ABE2DE40071C218 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B9898CA1A926F36003B4181 /* APHProfileExtender.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9898C91A926F36003B4181 /* APHProfileExtender.m */; };
 		A781166F1A96BC9400CEC822 /* 00_Blank_to_Activities@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = A78116601A96BC9400CEC822 /* 00_Blank_to_Activities@2x.m4v */; };
 		A78116701A96BC9400CEC822 /* 01_Activities_to_SensorData@2x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = A78116611A96BC9400CEC822 /* 01_Activities_to_SensorData@2x.m4v */; };
@@ -46,7 +44,10 @@
 		A781167A1A96BC9400CEC822 /* 11_IssuesToConsider1@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = A781166C1A96BC9400CEC822 /* 11_IssuesToConsider1@3x.m4v */; };
 		A781167B1A96BC9400CEC822 /* 12_IssuesToConside2@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = A781166D1A96BC9400CEC822 /* 12_IssuesToConside2@3x.m4v */; };
 		A781167C1A96BC9400CEC822 /* 13_RiskToPrivacy@3x.m4v in Resources */ = {isa = PBXBuildFile; fileRef = A781166E1A96BC9400CEC822 /* 13_RiskToPrivacy@3x.m4v */; };
-		CFA2ABBC19A7C3A9000DB961 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2ABBB19A7C3A9000DB961 /* CoreData.framework */; };
+		CE5575581B118C9A00111638 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5575511B118C5400111638 /* ResearchKit.framework */; };
+		CE5575591B118C9A00111638 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE5575511B118C5400111638 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEDE816A1B118C0E0011658F /* APCAppCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEAFF20A1B1186B500F8884F /* APCAppCore.framework */; };
+		CEDE816B1B118C0E0011658F /* APCAppCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEAFF20A1B1186B500F8884F /* APCAppCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFA2ABBE19A7C3C2000DB961 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2ABBD19A7C3C2000DB961 /* Security.framework */; };
 		CFA2ABC019A7C3EB000DB961 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA2ABBF19A7C3EB000DB961 /* AVFoundation.framework */; };
 		CFC2D2DD19A5417D00170E69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC2D2DC19A5417D00170E69 /* main.m */; };
@@ -65,27 +66,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		08F6D1B01AD6F94300DFF268 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
-			remoteInfo = ResearchKitTests;
-		};
-		743AD0D71ABE2DE40071C218 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B183A5951A8535D100C76870;
-			remoteInfo = OpenResearchKit;
-		};
-		743AD0DF1ABE2E880071C218 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = OpenResearchKit;
-		};
 		74B713A31ABF04B900FE2553 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 74B713981ABF04B900FE2553 /* BridgeSDK.xcodeproj */;
@@ -114,12 +94,26 @@
 			remoteGlobalIDString = 80855F4F19BE258C006601C7;
 			remoteInfo = BridgeSDK;
 		};
-		74B713F41AC0722E00FE2553 /* PBXContainerItemProxy */ = {
+		CE5575501B118C5400111638 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */;
+			containerPortal = CE55754A1B118C5400111638 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		CE5575521B118C5400111638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE55754A1B118C5400111638 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
+		CE55755A1B118C9A00111638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE55754A1B118C5400111638 /* ResearchKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = B183A4731A8535D100C76870;
-			remoteInfo = OpenResearchKit;
+			remoteInfo = ResearchKit;
 		};
 		CEAFF2091B1186B500F8884F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -135,6 +129,13 @@
 			remoteGlobalIDString = F5179B3419D09128001DCCB7;
 			remoteInfo = APCAppCoreTests;
 		};
+		CEDE816C1B118C0E0011658F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F5179B2819D09128001DCCB7;
+			remoteInfo = APCAppCore;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,8 +145,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				74B713F31AC0722E00FE2553 /* ResearchKit.framework in Embed Frameworks */,
+				CEDE816B1B118C0E0011658F /* APCAppCore.framework in Embed Frameworks */,
 				74B713EC1AC0722D00FE2553 /* BridgeSDK.framework in Embed Frameworks */,
+				CE5575591B118C9A00111638 /* ResearchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +181,6 @@
 		5BBDAEBE1A33DFDA0047DF87 /* HTMLContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTMLContent; sourceTree = "<group>"; };
 		5BBDAEF11A350FB40047DF87 /* LocationInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocationInfo.json; sourceTree = "<group>"; };
 		743BFFFE1A90E12800438241 /* APHConsentSection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APHConsentSection.json; sourceTree = "<group>"; };
-		747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../researchkit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		74B713981ABF04B900FE2553 /* BridgeSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BridgeSDK.xcodeproj; path = BridgeSDK/BridgeSDK.xcodeproj; sourceTree = SOURCE_ROOT; };
 		7B9898C81A926F36003B4181 /* APHProfileExtender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APHProfileExtender.h; sourceTree = "<group>"; };
 		7B9898C91A926F36003B4181 /* APHProfileExtender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APHProfileExtender.m; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		A781166C1A96BC9400CEC822 /* 11_IssuesToConsider1@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11_IssuesToConsider1@3x.m4v"; sourceTree = "<group>"; };
 		A781166D1A96BC9400CEC822 /* 12_IssuesToConside2@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12_IssuesToConside2@3x.m4v"; sourceTree = "<group>"; };
 		A781166E1A96BC9400CEC822 /* 13_RiskToPrivacy@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13_RiskToPrivacy@3x.m4v"; sourceTree = "<group>"; };
+		CE55754A1B118C5400111638 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ResearchKit/ResearchKit.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APCAppCore.xcodeproj; path = AppCore/APCAppCore/APCAppCore.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CFA2ABB519A7C229000DB961 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		CFA2ABBB19A7C3A9000DB961 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -228,12 +230,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B18CEF71A2D3A57001A905E /* MapKit.framework in Frameworks */,
+				CFA2ABBE19A7C3C2000DB961 /* Security.framework in Frameworks */,
+				CEDE816A1B118C0E0011658F /* APCAppCore.framework in Frameworks */,
 				74B713EB1AC0722D00FE2553 /* BridgeSDK.framework in Frameworks */,
 				F5F32C7C19D0D4C1007F9015 /* HealthKit.framework in Frameworks */,
+				CE5575581B118C9A00111638 /* ResearchKit.framework in Frameworks */,
 				CFA2ABC019A7C3EB000DB961 /* AVFoundation.framework in Frameworks */,
-				CFA2ABBE19A7C3C2000DB961 /* Security.framework in Frameworks */,
-				74B713F21AC0722E00FE2553 /* ResearchKit.framework in Frameworks */,
-				CFA2ABBC19A7C3A9000DB961 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,15 +297,6 @@
 			path = Dashboard;
 			sourceTree = "<group>";
 		};
-		743AD0D11ABE2DE40071C218 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				743AD0D81ABE2DE40071C218 /* ResearchKit.framework */,
-				08F6D1B11AD6F94300DFF268 /* ResearchKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		74B713991ABF04B900FE2553 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +343,15 @@
 			path = 3x;
 			sourceTree = "<group>";
 		};
+		CE55754B1B118C5400111638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE5575511B118C5400111638 /* ResearchKit.framework */,
+				CE5575531B118C5400111638 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		CEAFF2051B1186B400F8884F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,9 +364,9 @@
 		CFA2ABB419A7C1C1000DB961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE55754A1B118C5400111638 /* ResearchKit.xcodeproj */,
 				CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */,
 				74B713981ABF04B900FE2553 /* BridgeSDK.xcodeproj */,
-				747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */,
 				5B18CEF61A2D3A56001A905E /* MapKit.framework */,
 				CFA2ABBF19A7C3EB000DB961 /* AVFoundation.framework */,
 				CFA2ABBD19A7C3C2000DB961 /* Security.framework */,
@@ -533,9 +535,9 @@
 			);
 			dependencies = (
 				74B713AC1ABF04D400FE2553 /* PBXTargetDependency */,
-				743AD0E01ABE2E880071C218 /* PBXTargetDependency */,
 				74B713EE1AC0722E00FE2553 /* PBXTargetDependency */,
-				74B713F51AC0722E00FE2553 /* PBXTargetDependency */,
+				CEDE816D1B118C0E0011658F /* PBXTargetDependency */,
+				CE55755B1B118C9A00111638 /* PBXTargetDependency */,
 			);
 			name = LungSoundStudy;
 			productName = Parkinson;
@@ -593,8 +595,8 @@
 					ProjectRef = 74B713981ABF04B900FE2553 /* BridgeSDK.xcodeproj */;
 				},
 				{
-					ProductGroup = 743AD0D11ABE2DE40071C218 /* Products */;
-					ProjectRef = 747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */;
+					ProductGroup = CE55754B1B118C5400111638 /* Products */;
+					ProjectRef = CE55754A1B118C5400111638 /* ResearchKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -605,20 +607,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		08F6D1B11AD6F94300DFF268 /* ResearchKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ResearchKitTests.xctest;
-			remoteRef = 08F6D1B01AD6F94300DFF268 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		743AD0D81ABE2DE40071C218 /* ResearchKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ResearchKit.framework;
-			remoteRef = 743AD0D71ABE2DE40071C218 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		74B713A41ABF04B900FE2553 /* BridgeSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -631,6 +619,20 @@
 			fileType = wrapper.cfbundle;
 			path = BridgeSDKTests.xctest;
 			remoteRef = 74B713A51ABF04B900FE2553 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE5575511B118C5400111638 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = CE5575501B118C5400111638 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CE5575531B118C5400111638 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = CE5575521B118C5400111638 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		CEAFF20A1B1186B500F8884F /* APCAppCore.framework */ = {
@@ -716,11 +718,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		743AD0E01ABE2E880071C218 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OpenResearchKit;
-			targetProxy = 743AD0DF1ABE2E880071C218 /* PBXContainerItemProxy */;
-		};
 		74B713AC1ABF04D400FE2553 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BridgeSDK;
@@ -731,10 +728,15 @@
 			name = BridgeSDK;
 			targetProxy = 74B713ED1AC0722E00FE2553 /* PBXContainerItemProxy */;
 		};
-		74B713F51AC0722E00FE2553 /* PBXTargetDependency */ = {
+		CE55755B1B118C9A00111638 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = OpenResearchKit;
-			targetProxy = 74B713F41AC0722E00FE2553 /* PBXContainerItemProxy */;
+			name = ResearchKit;
+			targetProxy = CE55755A1B118C9A00111638 /* PBXContainerItemProxy */;
+		};
+		CEDE816D1B118C0E0011658F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = APCAppCore;
+			targetProxy = CEDE816C1B118C0E0011658F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
