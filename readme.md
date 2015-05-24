@@ -19,7 +19,7 @@ Building the App
 First, check out the source, including all the dependencies:
 
 ```
-git clone --recurse-submodules https://github.com/ResearchKit/LungSoundStudy.git
+git clone --recurse-submodules https://github.com/hptran/LungSoundStudy.git
 ```
 
 ###Building it
