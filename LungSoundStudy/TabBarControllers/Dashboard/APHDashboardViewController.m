@@ -34,9 +34,7 @@
 /* Controllers */
 #import "APHDashboardViewController.h"
 #import "APHDashboardEditViewController.h"
-#import "APHIntervalTappingRecorderDataKeys.h"
-#import "APHSpatialSpanMemoryGameViewController.h"
-#import "APHWalkingTaskViewController.h"
+
 
 static NSString * const kAPCBasicTableViewCellIdentifier       = @"APCBasicTableViewCell";
 static NSString * const kAPCRightDetailTableViewCellIdentifier = @"APCRightDetailTableViewCell";
@@ -117,32 +115,6 @@ static NSString * const kAPCRightDetailTableViewCellIdentifier = @"APCRightDetai
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Data
-
-- (void)prepareScoringObjects
-{
-    self.tapScoring = [[APCScoring alloc] initWithTask:@"2-APHIntervalTapping-7259AC18-D711-47A6-ADBD-6CFCECDED1DF"
-                                          numberOfDays:-kNumberOfDaysToDisplay
-                                              valueKey:kSummaryNumberOfRecordsKey];
-    
-    self.gaitScoring = [[APCScoring alloc] initWithTask:@"4-APHTimedWalking-80F09109-265A-49C6-9C5D-765E49AAF5D9"
-                                           numberOfDays:-kNumberOfDaysToDisplay
-                                               valueKey:kGaitScoreKey];
-    
-    self.memoryScoring = [[APCScoring alloc] initWithTask:@"7-APHSpatialSpanMemory-4A04F3D0-AC05-11E4-AB27-0800200C9A66"
-                                           numberOfDays:-kNumberOfDaysToDisplay
-                                               valueKey:kSpatialMemoryScoreSummaryKey
-                                               latestOnly:NO];
-    
-    self.phonationScoring = [[APCScoring alloc] initWithTask:@"3-APHPhonation-C614A231-A7B7-4173-BDC8-098309354292"
-                                             numberOfDays:-kNumberOfDaysToDisplay
-                                                 valueKey:kScoreSummaryOfRecordsKey];
-    
-    HKQuantityType *hkQuantity = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
-    self.stepScoring = [[APCScoring alloc] initWithHealthKitQuantityType:hkQuantity
-                                                                    unit:[HKUnit countUnit]
-                                                            numberOfDays:-kNumberOfDaysToDisplay];
-}
 
 - (void)prepareData
 {

@@ -34,8 +34,6 @@
 #import "APHPhonationTaskViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <APCAppCore/APCAppCore.h>
-#import "PDScores.h"
-#import "APHIntervalTappingRecorderDataKeys.h"
 #import "APHAppDelegate.h"
 
 static NSString *const kTaskName                              = @"Lung Sound";
@@ -221,52 +219,6 @@ static  NSTimeInterval  kGetSoundingAaahhhInterval            = 10.0;
     [super taskViewController: taskViewController
           didFinishWithReason: reason
                         error: error];
-}
-
-#pragma  mark  -  Results For Dashboard
-
-- (NSString *)createResultSummary
-{
-    ORKTaskResult  *taskResults = self.result;
-    self.createResultSummaryBlock = ^(NSManagedObjectContext * context) {
-        
-        ORKFileResult  *fileResult = nil;
-        BOOL  found = NO;
-        for (ORKStepResult  *stepResult  in  taskResults.results) {
-            if (stepResult.results.count > 0) {
-                for (id  object  in  stepResult.results) {
-                    if ([object isKindOfClass:[ORKFileResult class]] == YES) {
-                        found = YES;
-                        fileResult = object;
-                        break;
-                    }
-                }
-                if (found == YES) {
-                    break;
-                }
-            }
-        }
-        
-        double scoreSummary = [PDScores scoreFromPhonationTest: fileResult.fileURL];
-        scoreSummary = isnan(scoreSummary) ? 0 : scoreSummary;
-        
-        NSDictionary  *summary = @{kScoreSummaryOfRecordsKey : @(scoreSummary)};
-        
-        NSError  *error = nil;
-        NSData  *data = [NSJSONSerialization dataWithJSONObject:summary options:0 error:&error];
-        NSString  *contentString = nil;
-        if (data == nil) {
-            APCLogError2 (error);
-        } else {
-            contentString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        }
-        
-        if (contentString.length > 0)
-        {
-            [APCResult updateResultSummary:contentString forTaskResult:taskResults inContext:context];
-        }
-    };
-    return nil;
 }
 
 #pragma  mark  - View Controller methods
