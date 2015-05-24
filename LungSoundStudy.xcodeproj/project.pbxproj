@@ -121,16 +121,16 @@
 			remoteGlobalIDString = B183A4731A8535D100C76870;
 			remoteInfo = OpenResearchKit;
 		};
-		CE792D7D1B0D948500FA5319 /* PBXContainerItemProxy */ = {
+		CEAFF2091B1186B500F8884F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 747F5B671ABE2D3200197B68 /* APCAppCore.xcodeproj */;
+			containerPortal = CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F5179B2919D09128001DCCB7;
 			remoteInfo = APCAppCore;
 		};
-		CE792D7F1B0D948500FA5319 /* PBXContainerItemProxy */ = {
+		CEAFF20B1B1186B500F8884F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 747F5B671ABE2D3200197B68 /* APCAppCore.xcodeproj */;
+			containerPortal = CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F5179B3419D09128001DCCB7;
 			remoteInfo = APCAppCoreTests;
@@ -179,7 +179,6 @@
 		5BBDAEBE1A33DFDA0047DF87 /* HTMLContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTMLContent; sourceTree = "<group>"; };
 		5BBDAEF11A350FB40047DF87 /* LocationInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocationInfo.json; sourceTree = "<group>"; };
 		743BFFFE1A90E12800438241 /* APHConsentSection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = APHConsentSection.json; sourceTree = "<group>"; };
-		747F5B671ABE2D3200197B68 /* APCAppCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APCAppCore.xcodeproj; path = AppCore/APCAppCore/APCAppCore.xcodeproj; sourceTree = "<group>"; };
 		747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = ../researchkit/ResearchKit.xcodeproj; sourceTree = "<group>"; };
 		74B713981ABF04B900FE2553 /* BridgeSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BridgeSDK.xcodeproj; path = BridgeSDK/BridgeSDK.xcodeproj; sourceTree = SOURCE_ROOT; };
 		7B9898C81A926F36003B4181 /* APHProfileExtender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APHProfileExtender.h; sourceTree = "<group>"; };
@@ -198,6 +197,7 @@
 		A781166C1A96BC9400CEC822 /* 11_IssuesToConsider1@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "11_IssuesToConsider1@3x.m4v"; sourceTree = "<group>"; };
 		A781166D1A96BC9400CEC822 /* 12_IssuesToConside2@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "12_IssuesToConside2@3x.m4v"; sourceTree = "<group>"; };
 		A781166E1A96BC9400CEC822 /* 13_RiskToPrivacy@3x.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = "13_RiskToPrivacy@3x.m4v"; sourceTree = "<group>"; };
+		CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APCAppCore.xcodeproj; path = AppCore/APCAppCore/APCAppCore.xcodeproj; sourceTree = SOURCE_ROOT; };
 		CFA2ABB519A7C229000DB961 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		CFA2ABBB19A7C3A9000DB961 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		CFA2ABBD19A7C3C2000DB961 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -350,11 +350,11 @@
 			path = 3x;
 			sourceTree = "<group>";
 		};
-		CE792D791B0D948500FA5319 /* Products */ = {
+		CEAFF2051B1186B400F8884F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE792D7E1B0D948500FA5319 /* APCAppCore.framework */,
-				CE792D801B0D948500FA5319 /* APCAppCoreTests.xctest */,
+				CEAFF20A1B1186B500F8884F /* APCAppCore.framework */,
+				CEAFF20C1B1186B500F8884F /* APCAppCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -362,9 +362,9 @@
 		CFA2ABB419A7C1C1000DB961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */,
 				74B713981ABF04B900FE2553 /* BridgeSDK.xcodeproj */,
 				747F5B721ABE2D3E00197B68 /* ResearchKit.xcodeproj */,
-				747F5B671ABE2D3200197B68 /* APCAppCore.xcodeproj */,
 				5B18CEF61A2D3A56001A905E /* MapKit.framework */,
 				CFA2ABBF19A7C3EB000DB961 /* AVFoundation.framework */,
 				CFA2ABBD19A7C3C2000DB961 /* Security.framework */,
@@ -585,8 +585,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = CE792D791B0D948500FA5319 /* Products */;
-					ProjectRef = 747F5B671ABE2D3200197B68 /* APCAppCore.xcodeproj */;
+					ProductGroup = CEAFF2051B1186B400F8884F /* Products */;
+					ProjectRef = CEAFF2041B1186B400F8884F /* APCAppCore.xcodeproj */;
 				},
 				{
 					ProductGroup = 74B713991ABF04B900FE2553 /* Products */;
@@ -633,18 +633,18 @@
 			remoteRef = 74B713A51ABF04B900FE2553 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CE792D7E1B0D948500FA5319 /* APCAppCore.framework */ = {
+		CEAFF20A1B1186B500F8884F /* APCAppCore.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = APCAppCore.framework;
-			remoteRef = CE792D7D1B0D948500FA5319 /* PBXContainerItemProxy */;
+			remoteRef = CEAFF2091B1186B500F8884F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		CE792D801B0D948500FA5319 /* APCAppCoreTests.xctest */ = {
+		CEAFF20C1B1186B500F8884F /* APCAppCoreTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = APCAppCoreTests.xctest;
-			remoteRef = CE792D7F1B0D948500FA5319 /* PBXContainerItemProxy */;
+			remoteRef = CEAFF20B1B1186B500F8884F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
