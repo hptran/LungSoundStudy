@@ -64,7 +64,7 @@
     self.questions = @[
                        [[APCSegmentedButton alloc] initWithButtons:@[self.question1Option1, self.question1Option2] normalColor:[UIColor appSecondaryColor3] highlightColor:[UIColor appPrimaryColor]],
                        [[APCSegmentedButton alloc] initWithButtons:@[self.question2Option1, self.question2Option2] normalColor:[UIColor appSecondaryColor3] highlightColor:[UIColor appPrimaryColor]],
-                       [[APCSegmentedButton alloc] initWithButtons:@[self.question3Option1, self.question3Option2] normalColor:[UIColor appSecondaryColor3] highlightColor:[UIColor appPrimaryColor]],
+//                       [[APCSegmentedButton alloc] initWithButtons:@[self.question3Option1, self.question3Option2] normalColor:[UIColor appSecondaryColor3] highlightColor:[UIColor appPrimaryColor]],
                        ];
     [self.questions enumerateObjectsUsingBlock:^(APCSegmentedButton * obj, NSUInteger __unused idx, BOOL * __unused stop) {
         obj.delegate = self;
@@ -92,13 +92,13 @@
         [self.question2Option2.titleLabel setFont:[UIFont appQuestionOptionFont]];
     }
     
-    {
-        self.question3Label.textColor = [UIColor appSecondaryColor1];
-        self.question3Label.font = [UIFont appQuestionLabelFont];
-        
-        [self.question3Option1.titleLabel setFont:[UIFont appQuestionOptionFont]];
-        [self.question3Option2.titleLabel setFont:[UIFont appQuestionOptionFont]];
-    }
+//    {
+//        self.question3Label.textColor = [UIColor appSecondaryColor1];
+//        self.question3Label.font = [UIFont appQuestionLabelFont];
+//        
+//        [self.question3Option1.titleLabel setFont:[UIFont appQuestionOptionFont]];
+//        [self.question3Option2.titleLabel setFont:[UIFont appQuestionOptionFont]];
+//    }
     
 }
 
@@ -149,11 +149,11 @@
     
     APCSegmentedButton * question1 = self.questions[0];
     APCSegmentedButton * question2 = self.questions[1];
-    APCSegmentedButton * question3 = self.questions[2];
+//    APCSegmentedButton * question3 = self.questions[1];
     
     if ((question1.selectedIndex == 1) ||
-        (question2.selectedIndex == 1) ||
-        (question3.selectedIndex == 1)) {
+        (question2.selectedIndex == 1)){
+//        (question3.selectedIndex == 1)) {
         retValue = NO;
     }
     return retValue;

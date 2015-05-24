@@ -36,14 +36,7 @@
 #import "APHProfileExtender.h"
 
 
-static NSString *const kWalkingActivitySurveyIdentifier             = @"4-APHTimedWalking-80F09109-265A-49C6-9C5D-765E49AAF5D9";
-static NSString *const kVoiceActivitySurveyIdentifier               = @"3-APHPhonation-C614A231-A7B7-4173-BDC8-098309354292";
-static NSString *const kTappingActivitySurveyIdentifier             = @"2-APHIntervalTapping-7259AC18-D711-47A6-ADBD-6CFCECDED1DF";
-static NSString *const kMemoryActivitySurveyIdentifier              = @"7-APHSpatialSpanMemory-4A04F3D0-AC05-11E4-AB27-0800200C9A66";
-static NSString *const kPDSurveyIdentifier                          = @"6-PDQ8-20EF83D2-E461-4C20-9024-F43FCAAAF4C8";
-static NSString *const kWeeklySurveyIdentifier                      = @"5-MDSUPDRS-20EF82D1-E461-4C20-9024-F43FCAAAF4C8";
-static NSString *const kMyThoughtsSurveyIdentifier                  = @"8-MyThoughts-12ffde40-1551-4b48-aae2-8fef38d61b61";
-
+static NSString *const kAuscultationActivityIdentifier               = @"2-Ausculation-C614A231-A7B7-4173-BDC8-098309354292";
 /*********************************************************************************/
 #pragma mark - Initializations Options
 /*********************************************************************************/
@@ -69,9 +62,6 @@ static NSInteger const kMonthOfDayObject                = 2;
 
 
 
-
-
-
 @interface APHAppDelegate ()
 @property (nonatomic, strong) APHProfileExtender* profileExtender;
 
@@ -86,7 +76,7 @@ static NSInteger const kMonthOfDayObject                = 2;
                                               @(kSignUpPermissionsTypeCoremotion) : NSLocalizedString(@"Using the motion co-processor allows the app to determine your activity, helping the study better understand how activity level may influence disease.", @""),
                                               @(kSignUpPermissionsTypeMicrophone) : NSLocalizedString(@"Access to microphone is required for your Voice Recording Activity.", @""),
                                               @(kSignUpPermissionsTypeLocalNotifications) : NSLocalizedString(@"Allowing notifications enables the app to show you reminders.", @""),
-                                              @(kSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"On the next screen, you will be prompted to grant mPower access to read and write some of your general and health information, such as height, weight and steps taken so you don't have to enter it again.", @""),
+                                              @(kSignUpPermissionsTypeHealthKit) : NSLocalizedString(@"We hope that you understood the important parts in our consent document. On the next screen, you will be prompted to the registration form", @""),
                                                   };
     
     NSMutableDictionary * dictionary = [super defaultInitializationOptions];
@@ -128,21 +118,10 @@ static NSInteger const kMonthOfDayObject                = 2;
 
 -(void)setUpTasksReminder{
     
-    APCTaskReminder *walkingActivityReminder = [[APCTaskReminder alloc]initWithTaskID:kWalkingActivitySurveyIdentifier reminderBody:NSLocalizedString(@"Walking Activity", nil)];
-    APCTaskReminder *voiceActivityReminder = [[APCTaskReminder alloc]initWithTaskID:kVoiceActivitySurveyIdentifier reminderBody:NSLocalizedString(@"Voice Activity", nil)];
-    APCTaskReminder *tappingActivityReminder = [[APCTaskReminder alloc]initWithTaskID:kTappingActivitySurveyIdentifier reminderBody:NSLocalizedString(@"Tapping Activity", nil)];
-    APCTaskReminder *memoryActivityReminder = [[APCTaskReminder alloc]initWithTaskID:kMemoryActivitySurveyIdentifier reminderBody:NSLocalizedString(@"Memory Activity", nil)];
-    APCTaskReminder *pdSurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kPDSurveyIdentifier reminderBody:NSLocalizedString(@"PD Survey", nil)];
-    APCTaskReminder *weeklySurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kWeeklySurveyIdentifier reminderBody:NSLocalizedString(@"Weekly Survey", nil)];
-    APCTaskReminder *myThoughtsSurveyReminder = [[APCTaskReminder alloc]initWithTaskID:kMyThoughtsSurveyIdentifier reminderBody:NSLocalizedString(@"My Thoughts", nil)];
+    APCTaskReminder *voiceActivityReminder = [[APCTaskReminder alloc]initWithTaskID:kAuscultationActivityIdentifier reminderBody:NSLocalizedString(@"Auscultation Activity", nil)];
     
-    [self.tasksReminder manageTaskReminder:walkingActivityReminder];
     [self.tasksReminder manageTaskReminder:voiceActivityReminder];
-    [self.tasksReminder manageTaskReminder:tappingActivityReminder];
-    [self.tasksReminder manageTaskReminder:memoryActivityReminder];
-    [self.tasksReminder manageTaskReminder:pdSurveyReminder];
-    [self.tasksReminder manageTaskReminder:weeklySurveyReminder];
-    [self.tasksReminder manageTaskReminder:myThoughtsSurveyReminder];
+
     
 }
 
@@ -150,19 +129,10 @@ static NSInteger const kMonthOfDayObject                = 2;
 {
     [APCAppearanceInfo setAppearanceDictionary:@{
                                                  kPrimaryAppColorKey : [UIColor colorWithRed:255 / 255.0f green:0.0 blue:56 / 255.0f alpha:1.000],
-                                                 @"2-APHIntervalTapping-7259AC18-D711-47A6-ADBD-6CFCECDED1DF" : [UIColor appTertiaryPurpleColor],
-                                                 @"7-APHSpatialSpanMemory-4A04F3D0-AC05-11E4-AB27-0800200C9A66" : [UIColor appTertiaryRedColor],
-                                                 @"3-APHPhonation-C614A231-A7B7-4173-BDC8-098309354292" : [UIColor appTertiaryBlueColor],
-                                                 @"4-APHTimedWalking-80F09109-265A-49C6-9C5D-765E49AAF5D9" : [UIColor appTertiaryYellowColor],
+                                                 @"2-Ausculation-C614A231-A7B7-4173-BDC8-098309354292" : [UIColor appTertiaryBlueColor],
                                                  @"1-EnrollmentSurvey-20EF83D2-E461-4C20-9024-F43FCAAAF4C3": [UIColor lightGrayColor],
-                                                 @"6-PDQ8-20EF83D2-E461-4C20-9024-F43FCAAAF4C8": [UIColor lightGrayColor],
-                                                 @"5-MDSUPDRS-20EF82D1-E461-4C20-9024-F43FCAAAF4C8": [UIColor lightGrayColor],
-                                                 @"8-MyThoughts-12ffde40-1551-4b48-aae2-8fef38d61b61": [UIColor lightGrayColor],
-                                                 @"9-Feedback-394348ce-ca4f-4abe-b97e-fedbfd7ffb8e": [UIColor lightGrayColor],
-                                                 @"a-APHMedicationTracker-20EF8ED2-E461-4C20-9024-F43FCAAAF4C3": [UIColor colorWithRed:0.933
-                                                                                                                               green:0.267
-                                                                                                                                blue:0.380
-                                                                                                                               alpha:1.000]
+                                                 @"3-Feedback-394348ce-ca4f-4abe-b97e-fedbfd7ffb8e": [UIColor lightGrayColor],
+                                                
                                                  }];
     [[UINavigationBar appearance] setTintColor:[UIColor appPrimaryColor]];
     [[UINavigationBar appearance] setTitleTextAttributes: @{
