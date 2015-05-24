@@ -30,19 +30,6 @@
                           "icon_image":"stethescope_icon",
                           "tint_color" : "yellow"
                           },
-                          
-                        {
-                            "title": "Life with Parkinson Disease",
-                            "details": "lifewithPD",
-                            "icon_image": "disease_icon",
-                            "tint_color": "appColor"
-                        },
-                        {
-                            "title": "Symptoms",
-                            "details": "symptoms",
-                            "icon_image": "diagnostics_icon",
-                            "tint_color": "green"
-                        },
                         {
                             "title": "Online Resources",
                             "details": "online_resources",
