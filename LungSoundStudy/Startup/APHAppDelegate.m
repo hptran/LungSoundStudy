@@ -142,7 +142,7 @@ static NSInteger const kMonthOfDayObject                = 2;
     [[UIView appearance] setTintColor:[UIColor appPrimaryColor]];
     
     //  Enable server bypass
-    self.dataSubstrate.parameters.bypassServer = YES;
+    self.dataSubstrate.parameters.bypassServer = NO;
 }
 
 - (id <APCProfileViewControllerDelegate>) profileExtenderDelegate {
