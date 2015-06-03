@@ -114,6 +114,21 @@ static NSInteger const kMonthOfDayObject                = 2;
     self.initializationOptions = dictionary;
     
     self.profileExtender = [[APHProfileExtender alloc] init];
+    
+    SBBNetworkManager* networkMan = [SBBNetworkManager networkManagerForEnvironment:SBBEnvironmentProd study:@"api" baseURLPath:@"hero1711.com:9443"];
+    [SBBComponentManager registerComponent:networkMan forClass:[SBBNetworkManager class]];
+    
+    // To run this sample app in your study, change this prefix to the one assigned to your study.
+    // Leave it set to @"api" to run in the generic test study.
+    //[BridgeSDK setupWithStudy:@"lungsound"];
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // To run this sample app in your study, change this prefix to the one assigned to your study.
+    // Leave it set to @"api" to run in the generic test study.
+    [BridgeSDK setupWithStudy:@"lungsound"];
+    
+    return YES;
 }
 
 -(void)setUpTasksReminder{
@@ -319,6 +334,5 @@ static NSInteger const kMonthOfDayObject                = 2;
     
     return newDictionary;
 }
-
 
 @end
