@@ -126,7 +126,7 @@ static NSInteger const kMonthOfDayObject                = 2;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // To run this sample app in your study, change this prefix to the one assigned to your study.
     // Leave it set to @"api" to run in the generic test study.
-    [BridgeSDK setupWithStudy:@"lungsound"];
+    [BridgeSDK setupWithStudy:@"api"];
     
     return YES;
 }
@@ -157,7 +157,7 @@ static NSInteger const kMonthOfDayObject                = 2;
     [[UIView appearance] setTintColor:[UIColor appPrimaryColor]];
     
     //  Enable server bypass
-    self.dataSubstrate.parameters.bypassServer = NO;
+    self.dataSubstrate.parameters.bypassServer = YES;
 }
 
 - (id <APCProfileViewControllerDelegate>) profileExtenderDelegate {
